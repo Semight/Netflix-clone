@@ -1,0 +1,342 @@
+@import 'breakpoints';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$color-white: #fff;
+$color-buzz: #5B26CF;
+$color-red: #FF0000CC;
+$color-light-blue: #2D8ED8;
+$color-bite: #D72595;
+
+body {
+    margin: 0 auto;
+    background: #181818;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .navbar {
+        background: black;
+        padding: 10px 0 10px 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        transition: all .2s ease-in-out;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo {
+                font-style: italic;
+                font-size: 22px;
+                font-weight: 900;
+                display: flex;
+                color: red;
+            }
+
+            .nav {
+                display: flex;
+                align-items: center;
+
+                &--text {
+                    font-size: 13px;
+                }
+
+                &--btn {
+                    background: red;
+                    color: #fff;
+                    max-width: 112px;
+                    min-height: 0;
+                    line-height: 15px;
+                    border-radius: 4px;
+                    font-size: 11px;
+                    margin: 0 0 0 8px;
+                    padding: 6px 15px;
+                }
+
+                &--link {
+                    border: 1px solid #888;
+                    border-radius: 2px;
+                    color: #fff;
+                    font-weight: 400;
+                    line-height: 13px;
+                    white-space: nowrap;
+                    font-size: 11px;
+                    margin: 0 0 0 8px;
+                    padding: 6px 15px;
+                }
+            }
+        }
+
+    }
+
+    .big-container {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+        padding-top: 7rem;
+
+        .billboard {
+            max-width: 540px;
+
+            &--title {
+                font-size: 3rem;
+                font-weight: 900;
+                margin-bottom: 10px;
+            }
+
+            &--sub-title {
+                font-size: 16px;
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+        }
+
+        .m-collection, .m-blur {
+            margin-top: 2rem;
+            width: 100%;
+            
+            h2 {
+                margin-bottom: 10px;
+                font-size: 20px;
+                font-weight: 400;
+            }
+
+            .m-row {
+                display: flex;
+                overflow-x: scroll;
+                gap: 10px;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                a {
+                    background-color: transparent;
+                    max-width: 250px;
+                    min-height: 119px;
+                    overflow: hidden;                
+                }
+
+                img {
+                    transition: transform .2s ease-in-out;
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+
+                span {
+                    text-align: center;
+                    display: block;
+                    margin-top: 2px;
+                }
+            }
+        }
+
+        .m-blur {
+            filter: blur(5px);
+            pointer-events: none;
+        }
+
+        .m-details {
+            margin-top: 6rem;
+            text-align: center;
+            font-size: 24px;
+
+            .content {
+                margin: 0 auto;
+                max-width: 730px;
+
+                h2 {
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    margin-bottom: 2rem;
+                }
+                
+                .content-btn {
+                    background-color: red;
+                    color: #fff;
+                    font-size: 18px;
+                    max-height: 50px;
+                    min-width: 112px;
+                    padding: 14px 2rem;
+                    border: none;
+                    border-radius: 2px;
+                }
+            }
+        }
+
+        .footer {
+            font-size: 1em;
+            margin-top: 80px;
+            min-width: 190px;
+            padding-bottom: 20px;
+            width: 100%;
+            color: #737373;
+            text-decoration: none;
+
+            &--wrapper {
+                margin: 0 auto;
+                padding-top: 30px;
+                width: 90%;
+
+                .footer-top {
+                    margin: 0 0 30px;
+                }
+
+                .footer-link {
+                    font-size: 13px;
+                    max-width: 1000px;
+
+                    li {
+                        list-style-type: none;
+                        display: inline-block;
+                        margin-bottom: 16px;
+                        min-width: 100px;
+                        width: 24%;
+                    }
+                }
+            }
+        }
+    }
+}    
+
+    @include sm {
+
+            body {
+                margin: 0px 10px 0px 0px;
+            
+
+            .navbar {
+                padding-left: 10px;
+                padding-right: 10px;
+
+                .container {
+
+                    .logo {
+                        font-size: 16px;
+                    }
+
+                    .nav {
+                        // margin-right: 10px;
+
+                        &--text {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .big-container {
+                width: 100%;
+                margin-left: 10px;
+                margin-right: 10px;
+                padding-top: 4rem;
+
+                .billboard {
+                    max-width: 384px;
+
+                    &--title {
+                        font-weight: 700;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .m-collection, .m-blur {
+                    margin-top: 1rem;
+
+                    h2 {
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+
+                    .m-row {
+
+                        a {
+                            min-width: 163px;
+                        }
+                    }
+                }
+
+                .m-details {
+                    margin-top: 4rem;
+                    padding: 1em;
+
+                    .content {
+        
+                        h2 {
+                            font-size: 28px;
+                            font-weight: 500;
+                            margin-bottom: 30px;
+                        }
+        
+                        p {
+                            font-size: 23px;
+                            margin-bottom: 2rem;
+                        }
+                        
+                        .content-btn {
+                            background-color: red;
+                            color: #fff;
+                            font-size: 18px;
+                            max-height: 50px;
+                            min-width: 100%;
+                            padding: 14px 2rem;
+                            border: none;
+                            border-radius: 2px;
+                        }
+                    }
+                }
+
+                .footer {
+
+                    &--wrapper {
+
+                        
+                        .footer-link {
+                            max-width: 363px;
+        
+                            li {
+                                width: 49%;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    @include md {
+      
+    }
+    
+    @include lg {
+        
+    }
+
+    @include xl {
+
+    }
+
+
