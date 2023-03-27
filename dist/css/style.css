@@ -15,7 +15,7 @@ body a {
   color: #fff;
 }
 body .navbar {
-  background: black;
+  background: #000000;
   padding: 10px 0 10px 0;
   position: fixed;
   width: 100%;
@@ -34,7 +34,7 @@ body .navbar .container .logo {
   font-size: 22px;
   font-weight: 900;
   display: flex;
-  color: red;
+  color: rgba(255, 0, 0, 0.8);
 }
 body .navbar .container .nav {
   display: flex;
@@ -44,7 +44,7 @@ body .navbar .container .nav--text {
   font-size: 13px;
 }
 body .navbar .container .nav--btn {
-  background: red;
+  background: rgba(255, 0, 0, 0.8);
   color: #fff;
   max-width: 112px;
   min-height: 0;
@@ -64,6 +64,11 @@ body .navbar .container .nav--link {
   font-size: 11px;
   margin: 0 0 0 8px;
   padding: 6px 15px;
+}
+body .navbar .container img {
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 15px;
 }
 body .big-container {
   margin-left: 2.5rem;
@@ -142,7 +147,7 @@ body .big-container .m-details .content p {
   margin-bottom: 2rem;
 }
 body .big-container .m-details .content .content-btn {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.8);
   color: #fff;
   font-size: 18px;
   max-height: 50px;
